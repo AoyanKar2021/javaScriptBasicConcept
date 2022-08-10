@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div>
+      <p class="paragraph">Lorem ipsum dolor sit amet.</p>
+      <p class="paragraph">Lorem ipsum dolor sit amet.</p>
+      <p class="paragraph">Lorem ipsum dolor sit amet.</p>
+      <p class="paragraph">Lorem ipsum dolor sit amet.</p>
+      <p class="paragraph">Lorem ipsum dolor sit amet.</p>
+      <h1 id="header">Hello</h1>
+    </div>
+    <div class="containerP">
+      <p>Lorem - First P</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <h1 id="">Hello</h1>
+    </div>
+    <input type="button" onclick="change()" value="change" />
+    <br />
+    <span id="data">Hii dear</span>
+
+    <script>
+      var tag = document.getElementById("header");
+
+      const v = document.getElementsByClassName("containerP");
+      const y = document.getElementsByTagName("p");
+      document.getElementById("data").innerHTML =
+        " Your result: " + y[0].innerHTML;
+
+      // console.log(para);
+      function change() {
+        var para = document.getElementsByClassName("paragraph");
+        for (let s of para) {
+          s.innerHTML = tag.innerHTML;
+          s.style.color = "black";
+          s.style.fontSize = "30px";
+          s.style.textAlign = "center";
+          s.style.border = "10px solid black";
+          s.style.backgroundColor = "gray";
+        }
+      }
+    </script>
+  </body>
+</html>
